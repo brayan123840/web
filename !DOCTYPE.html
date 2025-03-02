@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .inicio {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffffff, #d3d3d3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .inicio h1 {
+            color: red;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .inicio img {
+            width: 100px;
+            margin-right: 10px;
+        }
+        .inicio-container {
+            display: flex;
+            align-items: center;
+        }
+        .inicio button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .inicio button:hover {
+            background: #555;
+        }
+        header {
+            width: 100%;
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            padding: 8px;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .content {
+            width: 80%;
+            padding: 20px;
+            background: white;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>MY FIRST WEBSITE</h1>
+    <p>we are going to uploaded to netlify</p>
+    <div class="inicio" id="inicio">
+        <div class="inicio-container">
+            <img src="buho.png" alt="Búho">
+            <h1>Welcome to Legal Time</h1>
+        </div>
+        <button onclick="document.getElementById('inicio').style.display='none'; document.getElementById('main').style.display='block';">Iniciar</button>
+    </div>
+    
+    <div id="main" style="display: none;">
+        <header>
+            <h1>Legal Time</h1>
+            <nav>
+                <a href="#servicios">Servicios</a>
+                <a href="#acerca">Acerca de</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#reservar">Reservar</a>
+            </nav>
+        </header>
+    
+        <section id="servicios" class="content">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Asesoría y consultoría legal</li>
+                <li>Representación legal</li>
+                <li>Derecho civil</li>
+                <li>Derecho penal</li>
+            </ul>
+        </section>
+    
+        <section id="acerca" class="content">
+            <h2>Acerca de</h2>
+            <p>En Legal Time, brindamos asesoría y representación legal con un enfoque profesional, transparente y accesible. Nuestro equipo de expertos en derecho está comprometido con la defensa de los derechos de nuestros clientes, ofreciendo soluciones jurídicas efectivas en diversas áreas legales. Ya sea que necesites asesoramiento preventivo o representación en litigios, estamos aquí para ayudarte con responsabilidad y confianza.</p>
+        </section>
+    
+        <section id="contacto" class="content">
+            <h2>📞 Contáctanos</h2>
+            <p>En Legal Time, ofrecemos asesoría legal en diversas áreas, desde derecho civil y familiar hasta laboral y mercantil. Si tienes dudas sobre tu situación legal o necesitas representación, no dudes en comunicarte con nosotros.</p>
+            <p><strong>Teléfono:</strong> 7122525217</p>
+    
+            <h3>Formulario de Contacto</h3>
+            <form class="formulario" action="mailto:lmiku6150@gmail.com" method="post" enctype="text/plain">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
